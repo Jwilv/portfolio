@@ -6,9 +6,9 @@ color:white;
 `
 
 export const App = () => {
-  return (
-    <>
-    <Title>App</Title>
-    </>
-  )
+    return (
+        <>
+            <Title>App</Title>
+        </>
+    )
 }

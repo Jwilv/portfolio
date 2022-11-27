@@ -13,7 +13,7 @@ const createNieve = ()=>{
     let animacion = Math.random() * 10 + 5;
 
     
-    copo.style.left = xPosition + 'px' ;
+    copo.style.left = xPosition - 10 + 'px' ;
     copo.style.width = size + 'px' ;
     copo.style.height = size + 'px' ;
     copo.style.zIndex = zIndex ;

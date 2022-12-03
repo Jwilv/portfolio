@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const PortfolioContainer = styled.div`
-background-color:lightslategrey;
+background-color:red;
 `
 
 export const Portfolio = () => {
-  return (
-    <PortfolioContainer>
+    return (
+        <PortfolioContainer>
 
-    </PortfolioContainer>
-  )
+        </PortfolioContainer>
+    )
 }

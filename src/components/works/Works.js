@@ -6,9 +6,9 @@ background-color:yellowgreen;
 `
 
 export const Works = () => {
-  return (
-    <WorksContainer>
+    return (
+        <WorksContainer>
 
-    </WorksContainer>
-  )
+        </WorksContainer>
+    )
 }

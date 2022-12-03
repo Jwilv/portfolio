@@ -6,9 +6,9 @@ background-color:rosybrown;
 `
 
 export const Contact = () => {
-  return (
-    <ContactContainer>
+    return (
+        <ContactContainer>
 
-    </ContactContainer>
-  )
+        </ContactContainer>
+    )
 }

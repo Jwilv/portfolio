@@ -60,7 +60,9 @@ export const TopBar = ({open,setOpen}) => {
                 <a href='#contact'>fgfdgdfgd</a> */}
                 </Left>
                 <Right>
-                <div className='Hamburger'>
+                <div 
+                className='Hamburger'
+                onClick={ ()=>{ setOpen (!open)}}>
                     <span className = 'Line1 '></span>
                     <span className = 'Line2 '></span>
                     <span className = 'Line3 '></span>

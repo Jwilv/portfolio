@@ -43,7 +43,7 @@ const Icon =styled(Person,Email)`
 
 export const TopBar = ({open,setOpen}) => {
     return (
-        <div className={'TopBarContainer' + (open && ' active')}>
+        <div className={'TopBarContainer ' + (open && 'active')}>
             <Wrapper>
                 <Left>
                     <a className='Logo' href='#intro' id='cambio'>Jwilv</a>

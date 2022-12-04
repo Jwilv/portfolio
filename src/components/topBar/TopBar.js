@@ -15,26 +15,36 @@ const Wrapper = styled.div`
 padding: 10px 30px;
 display:flex;
 align-items:center;
+justify-content:space-between;
+
 `
 const Left = styled.div`
 `
 const Right = styled.div`
+`
+const Logo = styled.a`
+font-size:40px;
+font-weight:700;
+text-decoration:none;
+color:black;
+`
+
+const ItemConteiner = styled.div`
 `
 
 export const TopBar = () => {
     return (
         <TopBarContainer>
             <Wrapper>
-            <Left>
-                <a href='#intro'>intro</a>
-                <a href='#works'>fgfdgdfgd</a>
+                <Left>
+                    <Logo href='#intro'>Jwilv</Logo>
+                    {/* <a href='#works'>fgfdgdfgd</a>
                 <a href='#portfolio'>fgfdgdfgd</a>
-                <a href='#contact'>fgfdgdfgd</a>
-
-            </Left>
-            <Right>
-
-            </Right>
+                <a href='#contact'>fgfdgdfgd</a> */}
+                </Left>
+               
+                <Right>
+                </Right>
             </Wrapper>
 
         </TopBarContainer>

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import IglooIllustration from "../../assets/imgs/IglooIllustration.png"
 import flecha from "../../assets/imgs/flecha.png"
+import { init } from 'ityped'
 
 
 const IntroContainer = styled.div`
@@ -75,23 +76,43 @@ animation: arrowBlink 3s infinite;
 }
 `
 
+const Texto = styled.span`
+font-size:30px;
+color:blue;
+
+`
+
 export const IntroPage = () => {
+
+  const textRef = useRef()
+
+  useEffect(() => {
+
+    init(textRef.current, {
+      showCursor: true,
+      backSpeed:60,
+      backDelay:1500,
+      strings: ['Dev fornt-end', 'Main Tec N5']
+    })
+
+  }, [])
+
   return (
     <IntroContainer id='intro'>
       <Left>
         <ImageContainer>
-        <Img src={IglooIllustration} alt='imagen que no carga' />
+          <Img src={IglooIllustration} alt='imagen que no carga' />
         </ImageContainer>
       </Left>
       <Right>
         <Wrapper>
           <H2>que se pone aca ?</H2>
           <H1>no puede hacer tarnco calor</H1>
-          <H3>Freelance <span>Dev fornt-end </span><span>Main Tec N5</span></H3>
+          <H3>Freelance <Texto ref={textRef}></Texto></H3>
           <FlechaCointainer href='#portfolio'>
             <Flecha src={flecha} alt='imagen que no carga' />
           </FlechaCointainer>
-          
+
 
         </Wrapper>
 

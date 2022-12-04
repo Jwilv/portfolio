@@ -6,6 +6,7 @@ body {
   justify-content: center; */
   /* min-height: 100hv;  */
   overflow-x: hidden;
+  font-family:'Prompt', sans-serif;;
 }
 
 body::-webkit-scrollbar {

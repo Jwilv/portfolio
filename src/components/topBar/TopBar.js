@@ -1,17 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import './topBar.css'
+import './topBar.scss'
 import {Person,Email} from '@mui/icons-material'
-
-const TopBarContainer = styled.div`
-width:100%;
-height:70px;
-background-color:white;
-color:black;
-position:fixed;
-top:0;
-z-index:2;
-`
 
 const Wrapper = styled.div`
 padding: 10px 30px;
@@ -26,13 +16,7 @@ align-items:center;
 `
 const Right = styled.div`
 `
-const Logo = styled.a`
-font-size:40px;
-font-weight:700;
-text-decoration:none;
-color:black;
-margin-right: 40px;
-`
+
 
 
 const ItemConteiner = styled.div`
@@ -41,29 +25,49 @@ align-items:center;
 margin-left: 30px;
 `
 
-export const TopBar = () => {
+const Info = styled.p`
+font-size: 15px;
+font-weight:500;
+
+`
+
+
+const Icon =styled(Person,Email)`
+    font-size: 18px;
+    margin-right: 5px;
+    `
+
+
+
+
+
+export const TopBar = ({open,setOpen}) => {
     return (
-        <TopBarContainer>
+        <div className={'TopBarContainer' + (open && ' active')}>
             <Wrapper>
                 <Left>
-                    <Logo href='#intro'>Jwilv</Logo>
+                    <a className='Logo' href='#intro' id='cambio'>Jwilv</a>
                     <ItemConteiner>
-                    <Person className='icon'/>
-                    <span>+54 9 11 3904-1378</span>
+                    <Icon />
+                    <Info>+54 9 11 3904-1378</Info>
                     </ItemConteiner>
                     <ItemConteiner>
-                    <Email className='icon'/>
-                    <span>juan.ignacio.wilvers@gmail.com</span>
+                    <Icon />
+                    <Info>juan.ignacio.wilvers@gmail.com</Info>
                     </ItemConteiner>
                     {/* <a href='#works'>fgfdgdfgd</a>
                 <a href='#portfolio'>fgfdgdfgd</a>
                 <a href='#contact'>fgfdgdfgd</a> */}
                 </Left>
-               
                 <Right>
+                <div className='Hamburger'>
+                    <span className = 'Line1 '></span>
+                    <span className = 'Line2 '></span>
+                    <span className = 'Line3 '></span>
+                </div>
                 </Right>
             </Wrapper>
 
-        </TopBarContainer>
+        </div>
     )
 }

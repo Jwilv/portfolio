@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Contact } from './components/contact/Contact'
 import { IntroPage } from './components/IntroPage/IntroPage'
@@ -24,10 +24,13 @@ scroll-snap-type: y mandatory;
 }
 `
 
+ 
+
 export const App = () => {
+    const [openMenu, setOpenMenu] = useState(false)
     return (
         <AppContainer>
-            <TopBar />
+            <TopBar open={openMenu} setOpen={setOpenMenu} />
             <Sections>
                 <IntroPage />
                 <Portfolio />

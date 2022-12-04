@@ -55,9 +55,6 @@ export const TopBar = ({open,setOpen}) => {
                     <Icon />
                     <Info>juan.ignacio.wilvers@gmail.com</Info>
                     </ItemConteiner>
-                    {/* <a href='#works'>fgfdgdfgd</a>
-                <a href='#portfolio'>fgfdgdfgd</a>
-                <a href='#contact'>fgfdgdfgd</a> */}
                 </Left>
                 <Right>
                 <div 

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // <img src={IglooIllustration} alt='imagen que no carga' />
 
 const IntroContainer = styled.div`
-background-color:black;
+background-color:green;
 `
 
 export const IntroPage = () => {

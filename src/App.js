@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Contact } from './components/contact/Contact'
 import { IntroPage } from './components/IntroPage/IntroPage'
+import { Menu } from './components/menu/Menu'
 import { Portfolio } from './components/portfolio/Portfolio'
 import { TopBar } from './components/topBar/TopBar'
 import { Works } from './components/works/Works'
@@ -31,6 +32,7 @@ export const App = () => {
     return (
         <AppContainer>
             <TopBar open={openMenu} setOpen={setOpenMenu} />
+            <Menu open={openMenu} setOpen={setOpenMenu}/>
             <Sections>
                 <IntroPage />
                 <Portfolio />

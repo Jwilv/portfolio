@@ -63,7 +63,16 @@ left:40%;
 
 
 const Flecha = styled.img`
-width: 30px;
+width: 40px;
+animation: arrowBlink 3s infinite;
+@keyframes arrowBlink {
+  50%{
+    opacity:0;
+  }
+  100%{
+    opacity:100;
+  }
+}
 `
 
 export const IntroPage = () => {
@@ -78,8 +87,8 @@ export const IntroPage = () => {
         <Wrapper>
           <H2>que se pone aca ?</H2>
           <H1>no puede hacer tarnco calor</H1>
-          <H3>freelance<span></span></H3>
-          <FlechaCointainer href='#intro'>
+          <H3>Freelance <span>Dev fornt-end </span><span>Main Tec N5</span></H3>
+          <FlechaCointainer href='#portfolio'>
             <Flecha src={flecha} alt='imagen que no carga' />
           </FlechaCointainer>
           

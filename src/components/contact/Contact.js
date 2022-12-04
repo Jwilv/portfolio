@@ -7,7 +7,7 @@ background-color:rosybrown;
 
 export const Contact = () => {
     return (
-        <ContactContainer>
+        <ContactContainer id='contact'>
 
         </ContactContainer>
     )

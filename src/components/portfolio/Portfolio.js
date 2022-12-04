@@ -7,7 +7,7 @@ background-color:red;
 
 export const Portfolio = () => {
     return (
-        <PortfolioContainer>
+        <PortfolioContainer id='portfolio'>
 
         </PortfolioContainer>
     )

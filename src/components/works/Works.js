@@ -7,7 +7,7 @@ background-color:yellowgreen;
 
 export const Works = () => {
     return (
-        <WorksContainer>
+        <WorksContainer id='works'>
 
         </WorksContainer>
     )

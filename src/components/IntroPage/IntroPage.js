@@ -9,7 +9,7 @@ background-color:black;
 
 export const IntroPage = () => {
   return (
-    <IntroContainer>
+    <IntroContainer id='intro'>
     </IntroContainer>
   )
 }

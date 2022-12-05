@@ -6,7 +6,8 @@ import { init } from 'ityped'
 
 
 const IntroContainer = styled.div`
-background-color:white ;
+/* background-color:#33C4FF ; */
+background-color:#edf5ff ;
 display:flex;
 `
 
@@ -18,11 +19,12 @@ overflow:hidden;
 const Right = styled.div`
 flex:0.5;
 position:relative;
+color: #000;
 `
 const ImageContainer = styled.div`
 width: 800px;
 height: 800px;
-background-color:blue;
+background-color:#edf5ff;
 border-radius:50%;
 display:flex;
 align-items:center;
@@ -49,11 +51,11 @@ margin:10px 0;
 `
 
 const H2 = styled.h2`
-font-size:35px;
+font-size:40px;
 `
 
 const H3 = styled.h3`
-font-size:35px;
+font-size:50px;
 `
 
 const FlechaCointainer = styled.a`
@@ -64,7 +66,7 @@ left:40%;
 
 
 const Flecha = styled.img`
-width: 40px;
+width: 70px;
 animation: arrowBlink 3s infinite;
 @keyframes arrowBlink {
   50%{
@@ -77,10 +79,12 @@ animation: arrowBlink 3s infinite;
 `
 
 const Texto = styled.span`
-font-size:30px;
-color:blue;
+font-size:50px;
+color:#00A7FF ;
 
 `
+
+
 
 export const IntroPage = () => {
 
@@ -92,7 +96,7 @@ export const IntroPage = () => {
       showCursor: true,
       backSpeed:60,
       backDelay:1500,
-      strings: ['Dev fornt-end', 'Main Tec N5']
+      strings: ['Dev front-end', 'Made in Tec N5'],
     })
 
   }, [])
@@ -108,7 +112,7 @@ export const IntroPage = () => {
         <Wrapper>
           <H2>que se pone aca ?</H2>
           <H1>no puede hacer tarnco calor</H1>
-          <H3>Freelance <Texto ref={textRef}></Texto></H3>
+          <H3>Freelance <Texto  ref={textRef}></Texto></H3>
           <FlechaCointainer href='#portfolio'>
             <Flecha src={flecha} alt='imagen que no carga' />
           </FlechaCointainer>

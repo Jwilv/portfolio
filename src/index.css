@@ -1,3 +1,5 @@
+
+
 body {
   background-color: #fff;
   margin: 0;
@@ -6,8 +8,11 @@ body {
   justify-content: center; */
   /* min-height: 100hv;  */
   overflow-x: hidden;
-  font-family:'Prompt', sans-serif;;
+  font-family: 'Prompt', sans-serif;
+
 }
+
+
 
 body::-webkit-scrollbar {
   display: none;
@@ -18,7 +23,7 @@ body::-webkit-scrollbar {
 
 Sections {
   scroll-snap-type: y mandatory;
-  
+
 }
 
 i {

@@ -47,14 +47,14 @@ export const TopBar = ({open,setOpen}) => {
             <Wrapper>
                 <Left>
                     <a className='Logo' href='#intro' id='cambio'>Jwilv</a>
-                    <ItemConteiner>
+                    {/* <ItemConteiner>
                     <Icon />
                     <Info>+54 9 11 3904-1378</Info>
                     </ItemConteiner>
                     <ItemConteiner>
                     <Icon />
                     <Info>juan.ignacio.wilvers@gmail.com</Info>
-                    </ItemConteiner>
+                    </ItemConteiner> */}
                 </Left>
                 <Right>
                 <div 

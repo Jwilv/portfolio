@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
     h1 {
         font-size: 50px;
@@ -35,6 +36,7 @@
         justify-content: center;
         flex-wrap: wrap;
         .Item {
+            
             width: 220px;
             height: 150px;
             border-radius: 20px;
@@ -45,12 +47,13 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            transition: all .5s ease;
+            transition: all 1s ease;
             cursor: pointer;
 
             h3{
                 position: absolute;
                 font-size: 20px;
+                
                 
             }
 
@@ -59,9 +62,11 @@
                 height: 100%;
                 object-fit: cover;
                 z-index: 1;
+                transition: all .5s ease;
             }
 
             &:hover{
+                
                 background-color: #edf5ff;
                 img{
                     opacity: 0.2;

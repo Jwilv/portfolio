@@ -1,14 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
+import './works.scss'
 
-const WorksContainer = styled.div`
-background-color:yellowgreen;
-`
+
 
 export const Works = () => {
     return (
-        <WorksContainer id='works'>
+        <div className='worksContainer' id='works'>
+            <div className='slider'>
+                <div className='container'>
+                <div className='item'>
+                <div className='left'></div>
+                <div className='right'></div>
+                </div>
+                </div>
+            </div>
 
-        </WorksContainer>
+        </div>
     )
 }

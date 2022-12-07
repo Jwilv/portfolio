@@ -66,41 +66,13 @@ export const Portfolio = () => {
             </ul>
 
             <div className="Container">
-
-                <div className='Item'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCzGjj6cpYkZ7fUDtoPSxBfdrUTsbdCYpTA&usqp=CAU" alt='imagen de prueba' />
-                    <h3>imagen de prueba</h3>
+                {data.map( ({id,title,img})=>(
+                    <div key={id} className='Item'>
+                    <img src={img} 
+                    alt='imagen de prueba' />
+                    <h3>{title}</h3>
                 </div>
-
-
-                <div className='Item'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCzGjj6cpYkZ7fUDtoPSxBfdrUTsbdCYpTA&usqp=CAU" alt='imagen de prueba' />
-                    <h3>imagen de prueba</h3>
-                </div>
-
-
-                <div className='Item'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCzGjj6cpYkZ7fUDtoPSxBfdrUTsbdCYpTA&usqp=CAU" alt='imagen de prueba' />
-                    <h3>imagen de prueba</h3>
-                </div>
-
-                <div className='Item'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCzGjj6cpYkZ7fUDtoPSxBfdrUTsbdCYpTA&usqp=CAU" alt='imagen de prueba' />
-                    <h3>imagen de prueba</h3>
-                </div>
-
-
-                <div className='Item'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCzGjj6cpYkZ7fUDtoPSxBfdrUTsbdCYpTA&usqp=CAU" alt='imagen de prueba' />
-                    <h3>imagen de prueba</h3>
-                </div>
-
-
-                <div className='Item'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCzGjj6cpYkZ7fUDtoPSxBfdrUTsbdCYpTA&usqp=CAU" alt='imagen de prueba' />
-                    <h3>imagen de prueba</h3>
-                </div>
-
+                ))}
             </div>
 
         </div>

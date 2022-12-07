@@ -21,11 +21,6 @@ body::-webkit-scrollbar {
 
 }
 
-Sections {
-  scroll-snap-type: y mandatory;
-
-}
-
 i {
   position: absolute;
   background: #fff;

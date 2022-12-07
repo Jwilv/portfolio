@@ -9,7 +9,6 @@ import { Works } from './components/works/Works'
 
 const AppContainer = styled.div`
     height: 100vh;
-    
 `
 const Sections = styled.div`
 width:100%;
@@ -17,15 +16,13 @@ height:calc(100vh - 70px);
 background-color:gray;
 position:relative;
 top:70px;
-scroll-snap-type: y mandatory;
+
 
 > *{
     width:100vw;
-    height:calc(100vh - 70px);
+    height:calc(100vh - 50px);
 }
 `
-
- 
 
 export const App = () => {
     const [openMenu, setOpenMenu] = useState(false)

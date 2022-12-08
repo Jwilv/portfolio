@@ -1,38 +1,25 @@
 import React from 'react'
 import './works.scss'
 import flecha from "../../assets/imgs/flecha.png"
+import { dataWorks } from './dataWorks'
+import { Slider } from '../../slider/Slider'
 
 
 
 export const Works = () => {
     return (
         <div className='worksContainer' id='works'>
-            <div className='slider'>
-                <div className='container'>
-                    <div className='item'>
-                        <div className='left'>
-                            <div className='leftContainer'>
-                                <div className='imgCointainer'>
-                                    {/* <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb_tu7GgJWDljnoor35A4-jwLC93qS6VGPfw&usqp=CAU'
-                                        alt='imagen que no carga' /> */}
-                                </div>
-                                <h2>titulo de prueba</h2>
-                                <p>gjfdhgj fdhgj jhs jghjsdfdhgjfshjkgsfhdjkghjdfshgjhfsdjkghdfjksg
-                                </p>
-                                <span>Proyects</span>
-                            </div>
-                        </div>
-                        <div className='right'></div>
-                    </div>
-                </div>
-            </div>
+            {dataWorks.map(({title,id,desc}) => (
+                <Slider key={id} title={title} desc={desc}/> 
+            ))}
 
-            <img src={flecha} 
-            alt='imagen que no carga'
-            className='flecha Left'/>
-            <img src={flecha} 
-            alt='imagen que no carga'
-            className='flecha Right'/>
+
+            <img src={flecha}
+                alt='imagen que no carga'
+                className='flecha Left' />
+            <img src={flecha}
+                alt='imagen que no carga'
+                className='flecha Right' />
 
         </div>
     )

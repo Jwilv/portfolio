@@ -1,8 +1,25 @@
 .worksContainer {
-    background-color: black;
+    background-color: green;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    .flecha{
+        height: 90px;
+        position: absolute;
+        cursor: pointer;
+
+        &.Left{
+            left: 300px;
+            transform: rotate(90deg);
+        }
+
+        &.Right{
+            right: 300px;
+            transform: rotate(270deg);
+        }
+    }
 
     .slider {
         height: 400px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import './works.scss'
+import flecha from "../../assets/imgs/flecha.png"
 
 
 
@@ -25,6 +26,13 @@ export const Works = () => {
                     </div>
                 </div>
             </div>
+
+            <img src={flecha} 
+            alt='imagen que no carga'
+            className='flecha Left'/>
+            <img src={flecha} 
+            alt='imagen que no carga'
+            className='flecha Right'/>
 
         </div>
     )

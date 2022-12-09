@@ -5,9 +5,15 @@
     border-radius: 10px;
     cursor: pointer;
     user-select: none;
+    box-shadow: 0 4px 8px 0 rgba(133, 193, 233);
+            transition: 0.3s;
+
+            &:hover {
+                box-shadow: 0 14px 18px 0 rgba(133, 193, 233);
+            }
 
     &.active {
         background-color: white;
-        color: blue;
+        color: #6D67E4;
     }
 }

@@ -1,21 +1,22 @@
 .worksContainer {
-    background-color: green;
+    background-color: #edf5ff;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    
 
-    .flecha{
+    .flecha {
         height: 90px;
         position: absolute;
         cursor: pointer;
 
-        &.Left{
+        &.Left {
             left: 300px;
             transform: rotate(90deg);
         }
 
-        &.Right{
+        &.Right {
             right: 300px;
             transform: rotate(270deg);
         }

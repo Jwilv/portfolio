@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './works.scss'
-import flecha from "../../assets/imgs/flecha.png"
+import flecha from "../../assets/imgs/flecha2.png"
 import { dataWorks } from './dataWorks'
 import { Slider } from '../../slider/Slider'
 

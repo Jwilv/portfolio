@@ -1,10 +1,10 @@
 import React from 'react'
 import './slider.scss'
 
-export const Slider = ({ title, desc,slider }) => {
+export const Slider = ({ title, desc, slider }) => {
 
     return (
-        <div className='slider' style={{ transform: `translateX(-${slider})`}}>
+        <div className='slider' style={{ transform: `translateX(-${slider * 100}vw)` }}>
             <div className='container'>
                 <div className='item'>
                     <div className='left'>

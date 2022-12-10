@@ -4,6 +4,7 @@ import { Contact } from './components/contact/Contact'
 import { IntroPage } from './components/IntroPage/IntroPage'
 import { Menu } from './components/menu/Menu'
 import { Portfolio } from './components/portfolio/Portfolio'
+import { Skills } from './components/skills/Skills'
 import { TopBar } from './components/topBar/TopBar'
 import { Works } from './components/works/Works'
 
@@ -34,6 +35,7 @@ export const App = () => {
                 <IntroPage />
                 <Portfolio />
                 <Works />
+                <Skills />
                 <Contact />
             </Sections>
         </AppContainer>

@@ -1,0 +1,74 @@
+.PortfolioContainer {
+    background-color: #edf5ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h1 {
+        font-size: 50px;
+    }
+
+    ul {
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    .Container {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .Item {
+
+            width: 220px;
+            height: 150px;
+            border-radius: 20px;
+            // border: 1px solid black;
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 1s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+            transition: 0.3s;
+
+            &:hover {
+                box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+            }
+
+            h3 {
+                position: absolute;
+                font-size: 20px;
+
+
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                // object-fit: cover;
+                // z-index: 1;
+                // transition: all .5s ease;
+            }
+
+            &:hover {
+
+                background-color: #edf5ff;
+
+                img {
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+            }
+
+        }
+    }
+}

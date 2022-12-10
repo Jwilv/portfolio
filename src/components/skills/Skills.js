@@ -1,19 +1,25 @@
 import React from 'react'
-import { SkillsItem } from '../skillsItem/SkillsItem'
-import { dataSkills } from './dataSkills'
+import './skills.scss'
+import {dataSkills} from './dataSkills'
+
+
+
 
 export const Skills = () => {
+
     return (
-        <div>
+        <div className='SkillsContainer' id='portfolio'>
 
-            <h2>Skills</h2>
+            <h1>Skills</h1>
 
-            {dataSkills.map(({ id, desc, Img }) => (
-                <SkillsItem 
-                id={id}
-                desc={desc}
-                img={Img}/>
-            ))}
+            <div className="container">
+                {dataSkills.map( ({id,desc,Img})=>(
+                    <div key={id} className='item'>
+                    <img src={Img} 
+                    alt='imagen de prueba' />
+                </div>
+                ))}
+            </div>
 
         </div>
     )

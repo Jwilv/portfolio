@@ -20,5 +20,3 @@ export const imgs = {
     Sql: sql,
     Ts: ts,
 }
-
-//Js,Html,Css,Scss,React,Node,Express,Sql,TS

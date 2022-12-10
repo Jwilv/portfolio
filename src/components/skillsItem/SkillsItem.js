@@ -1,11 +1,15 @@
 import React from 'react'
+import './skillsItem.scss'
 
-export const SkillsItem = ({id,desc,img}) => {
-  return (
-    <div>
-        <p>{desc}</p>
-        <img src={img} alt={desc}/>
-        <span>{id}</span>
-    </div>
-  )
+export const SkillsItem = ({ img }) => {
+    return (
+        <div className='SkillsItem'>
+            <div className='Container'>
+                <div className='Item'>
+                    <img src={img} alt='' />
+                </div>
+            </div>
+        </div>
+
+    )
 }

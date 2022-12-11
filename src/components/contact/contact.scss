@@ -5,8 +5,8 @@
     .left {
         flex: 1;
         overflow: hidden;
-        
-        img{
+
+        img {
             width: 70%;
         }
     }
@@ -18,12 +18,12 @@
         align-items: center;
         justify-content: center;
 
-        h2{
+        h2 {
             font-size: 30px;
 
         }
 
-        form{
+        form {
             width: 70%;
             height: 70%;
             display: flex;
@@ -31,20 +31,27 @@
             align-items: center;
             justify-content: space-around;
 
-            input{
+            input {
                 width: 500px;
                 height: 30px;
                 font-size: 14px;
 
+                &::placeholder {
+                    padding-left: 10px;
+                }
             }
 
-            textarea{
+            textarea {
                 width: 500px;
                 height: 400px;
                 font-style: 14px;
+
+                &::placeholder {
+                    padding-left: 10px;
+                }
             }
 
-            button{
+            button {
                 width: 150px;
                 height: 30px;
             }

@@ -1,14 +1,21 @@
 import React from 'react'
-import styled from 'styled-components'
+import'./contact.scss'
+import pinguinoContact from '../../assets/imgs/pinguinoContact.png'
 
-const ContactContainer = styled.div`
-background-color:rosybrown;
-`
+
 
 export const Contact = () => {
     return (
-        <ContactContainer id='contact'>
+        <div className='ContactContainer' id='contact'>
 
-        </ContactContainer>
+            <div className='left'>
+                <img src={pinguinoContact} alt='imagen que no carga'/>
+            </div>
+            <div className='right'>
+                <h2>Contact</h2>
+                <form></form>
+            </div>
+
+        </div>
     )
 }

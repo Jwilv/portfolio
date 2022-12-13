@@ -21,15 +21,19 @@
     position: relative;
     width: 150px;
     height: 150px;
-    transform: rotate(270deg);
+    
 }
 
 .skillsIconContainer .card .percent svg {
     position: relative;
     width: 150px;
     height: 150px;
-
+    transform: rotate(270deg);
+    
 }
+
+
+
 
 .skillsIconContainer .card .percent svg circle {
     width: 100%;
@@ -43,4 +47,37 @@
     stroke: blue;
     stroke-dasharray: 440;
     stroke-dashoffset: calc(440 - 440 * 20 / 100);
+}
+
+.dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    /* transform: rotate(calc( 3.6deg * 20 )); */
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+    0%{
+        transform: rotate();
+    }
+    100%{
+        transform: rotate(calc(3.6deg * 20));
+    }
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: chocolate;
+    box-shadow: 0 0 10px chocolate,
+        0 0 30px chocolate;
+
+
 }

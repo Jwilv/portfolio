@@ -1,0 +1,47 @@
+
+
+.skillsIconContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.skillsIconContainer .card {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skillsIconContainer .card .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+}
+
+.skillsIconContainer .card .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+}
+
+.skillsIconContainer .card .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: blue;
+    transform: translate(5px ,5px);
+}
+
+.skillsIconContainer .card .percent svg circle:nth-child(2){
+    stroke: var( --crl );
+}

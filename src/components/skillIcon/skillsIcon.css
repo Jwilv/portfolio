@@ -1,5 +1,3 @@
-
-
 .skillsIconContainer {
     position: relative;
     display: flex;
@@ -23,7 +21,7 @@
     position: relative;
     width: 150px;
     height: 150px;
-
+    transform: rotate(270deg);
 }
 
 .skillsIconContainer .card .percent svg {
@@ -33,15 +31,16 @@
 
 }
 
-.skillsIconContainer .card .percent svg circle{
+.skillsIconContainer .card .percent svg circle {
     width: 100%;
     height: 100%;
     fill: transparent;
     stroke-width: 2;
-    stroke: blue;
-    transform: translate(5px ,5px);
+    transform: translate(5px, 5px);
 }
 
-.skillsIconContainer .card .percent svg circle:nth-child(2){
-    stroke: var( --crl );
+.skillsIconContainer .card .percent svg circle:nth-child(2) {
+    stroke: blue;
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - 440 * 20 / 100);
 }

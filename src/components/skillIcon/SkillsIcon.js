@@ -31,6 +31,29 @@ const Dot = styled.div`
     z-index: 10;
     /* transform: rotate(calc( 3.6deg * 20 )); */
     animation: animateDot 2s linear forwards;
+
+    &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: chocolate;
+    box-shadow: 0 0 10px chocolate,
+        0 0 30px #d2691e;
+}
+
+    @keyframes animateDot {
+    0%{
+        transform: rotate();
+    }
+    100%{
+        transform: rotate(calc(3.6deg * 80));
+    }
+}
     `
 
 const Svg = styled.svg`
@@ -62,27 +85,62 @@ const Circle = styled.circle`
     100%{
         opacity: 1;
     }
-    
+
     }
     }
 `
 
+const Number = styled.div`
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation : fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+`
+
+const Percentage = styled.h2`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+`
+
+const PercentageIcon = styled.span`
+    font-weight: 300;
+    color: black;
+    font-size: 1.5rem;
+`
+
+const Description = styled.p`
+    font-weight: 300;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(210, 105, 30);
+    margin: 0;
+`
+
 export const SkillsIcon = () => {
-
-
     return (
-        <SkillsIconContainer className='skillsIconContainer'>
-            <Card className='card'>
-                <Percent className='percent' >
-                    <Dot className='dot'></Dot>
+        <SkillsIconContainer>
+            <Card>
+                <Percent>
+                    <Dot></Dot>
                     <Svg>
                         <Circle cx='70' cy='70' r='70' ></Circle>
                         <Circle cx='70' cy='70' r='70' ></Circle>
                     </Svg>
-                    <div className='number'>
-                        <h2>80<span>%</span></h2>
-                        <p>Html</p>
-                    </div>
+                    <Number>
+                        <Percentage>80<PercentageIcon>%</PercentageIcon></Percentage>
+                        <Description>Html</Description>
+                    </Number>
                 </Percent>
             </Card>
         </SkillsIconContainer>

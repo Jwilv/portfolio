@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-//import './skillsIcon.css'
 
 const SkillsIconContainer = styled.div`
 position: relative;

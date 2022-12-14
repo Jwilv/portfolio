@@ -1,5 +1,13 @@
 import React from 'react'
-import './skillsIcon.css'
+import styled from 'styled-components'
+//import './skillsIcon.css'
+
+const skillsIconContainer = styled.div`
+position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    `
 
 export const SkillsIcon = () => {
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {selectorType} from './selectortType'
 
 const SkillsIconContainer = styled.div`
 position: relative;
@@ -70,7 +71,7 @@ const Circle = styled.circle`
     transform: translate(5px, 5px);
 
     &:nth-child(2){
-    stroke: blue;
+    stroke: ${ props =>  selectorType(props.variant)};
     stroke-dasharray: 440;
     stroke-dashoffset: calc(440 - 440 * 80 / 100);
     opacity: 0;
@@ -134,7 +135,7 @@ export const SkillsIcon = () => {
                     <Dot></Dot>
                     <Svg>
                         <Circle cx='70' cy='70' r='70' ></Circle>
-                        <Circle cx='70' cy='70' r='70' ></Circle>
+                        <Circle variant='Js' cx='70' cy='70' r='70' ></Circle>
                     </Svg>
                     <Number>
                         <Percentage>80<PercentageIcon>%</PercentageIcon></Percentage>

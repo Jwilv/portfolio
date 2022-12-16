@@ -46,6 +46,10 @@
                 transition: all .5s ease;
             }
 
+            SkillsIcon{
+                position: absolute;
+            }
+
             &:hover {
 
                 background-color: #edf5ff;

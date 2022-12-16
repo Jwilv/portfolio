@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { selectorType } from './selectortType'
 
 const SkillsIconContainer = styled.div`
-position: relative;
+position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,6 @@ const Card = styled.div`
     position: relative;
     width: 220px;
     height: 250px;
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,6 @@ const Percent = styled.div`
 const Dot = styled.div`
     position: absolute;
     inset: 5px;
-    z-index: 10;
     transform: rotate(calc(3.6deg * ${({ value }) => value}));
 
     &::before {
@@ -40,8 +38,8 @@ const Dot = styled.div`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: chocolate;
-    box-shadow: 0 0 10px chocolate,
+    background: ${({variant}) => selectorType(variant)};
+    box-shadow: 0 0 10px ${({variant}) => selectorType(variant)},
         0 0 30px #d2691e;
 }
 `
@@ -101,18 +99,15 @@ const Description = styled.p`
     margin: 0;
 `
 
-export const SkillsIcon = () => {
-    const wrapper = 'Js'
-    const porcentaje = 50;
-    const desc = 'JS'
+export const SkillsIcon = ({desc,porcentaje}) => {
     return (
         <SkillsIconContainer>
             <Card>
                 <Percent>
-                    <Dot value={porcentaje}></Dot>
+                    <Dot variant={desc} value={porcentaje}></Dot>
                     <Svg>
                         <Circle cx='70' cy='70' r='70' ></Circle>
-                        <Circle variant={wrapper} value={porcentaje} cx='70' cy='70' r='70' ></Circle>
+                        <Circle variant={desc} value={porcentaje} cx='70' cy='70' r='70' ></Circle>
                     </Svg>
                     <Number>
                         <Percentage>{porcentaje}<PercentageIcon>%</PercentageIcon></Percentage>

@@ -12,7 +12,7 @@ export const dataSkills = [
         id: 1,
         desc: 'Js',
         Img: Js,
-        color : 'red',
+        color : 'blue',
     },
     {
         id: 2,

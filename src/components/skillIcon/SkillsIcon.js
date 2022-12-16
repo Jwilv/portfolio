@@ -93,8 +93,8 @@ const PercentageIcon = styled.span`
 `
 
 const Description = styled.p`
-    font-weight: 300;
-    font-size: 0.8em;
+    font-weight: 600;
+    font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: rgba(210, 105, 30);
@@ -104,6 +104,7 @@ const Description = styled.p`
 export const SkillsIcon = () => {
     const wrapper = 'Js'
     const porcentaje = 50;
+    const desc = 'JS'
     return (
         <SkillsIconContainer>
             <Card>
@@ -115,7 +116,7 @@ export const SkillsIcon = () => {
                     </Svg>
                     <Number>
                         <Percentage>{porcentaje}<PercentageIcon>%</PercentageIcon></Percentage>
-                        <Description>Html</Description>
+                        <Description>{desc}</Description>
                     </Number>
                 </Percent>
             </Card>

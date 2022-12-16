@@ -61,7 +61,7 @@ const Circle = styled.circle`
     transform: translate(5px, 5px);
 
     &:nth-child(2){
-    stroke: ${props => selectorType(props.variant)};
+    stroke: ${({variant}) => selectorType(variant)};
     stroke-dasharray: 440;
     stroke-dashoffset: calc(440 - 440 * ${({ value }) => value} / 100);
     }

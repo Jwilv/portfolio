@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {selectorType} from './selectortType'
+import { selectorType } from './selectortType'
 
 const SkillsIconContainer = styled.div`
 position: relative;
@@ -29,8 +29,7 @@ const Dot = styled.div`
     position: absolute;
     inset: 5px;
     z-index: 10;
-    /* transform: rotate(calc( 3.6deg * 20 )); */
-    animation: animateDot 2s linear forwards;
+    transform: rotate(calc(3.6deg * ${({ value }) => value}));
 
     &::before {
     content: '';
@@ -45,16 +44,7 @@ const Dot = styled.div`
     box-shadow: 0 0 10px chocolate,
         0 0 30px #d2691e;
 }
-
-    @keyframes animateDot {
-    0%{
-        transform: rotate();
-    }
-    100%{
-        transform: rotate(calc(3.6deg * 80));
-    }
-}
-    `
+`
 
 const Svg = styled.svg`
     position: relative;
@@ -71,22 +61,9 @@ const Circle = styled.circle`
     transform: translate(5px, 5px);
 
     &:nth-child(2){
-    stroke: ${ props =>  selectorType(props.variant)};
+    stroke: ${props => selectorType(props.variant)};
     stroke-dasharray: 440;
-    stroke-dashoffset: calc(440 - 440 * 80 / 100);
-    opacity: 0;
-    animation : fadeIn 1s linear forwards;
-    animation-delay: 2.5s;
-
-    @keyframes fadeIn {
-        0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-
-    }
+    stroke-dashoffset: calc(440 - 440 * ${({ value }) => value} / 100);
     }
 `
 
@@ -97,9 +74,6 @@ const Number = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity: 0;
-    animation : fadeIn 1s linear forwards;
-    animation-delay: 2.5s;
 `
 
 const Percentage = styled.h2`
@@ -128,17 +102,19 @@ const Description = styled.p`
 `
 
 export const SkillsIcon = () => {
+    const wrapper = 'Js'
+    const porcentaje = 50;
     return (
         <SkillsIconContainer>
             <Card>
                 <Percent>
-                    <Dot></Dot>
+                    <Dot value={porcentaje}></Dot>
                     <Svg>
                         <Circle cx='70' cy='70' r='70' ></Circle>
-                        <Circle variant='Js' cx='70' cy='70' r='70' ></Circle>
+                        <Circle variant={wrapper} value={porcentaje} cx='70' cy='70' r='70' ></Circle>
                     </Svg>
                     <Number>
-                        <Percentage>80<PercentageIcon>%</PercentageIcon></Percentage>
+                        <Percentage>{porcentaje}<PercentageIcon>%</PercentageIcon></Percentage>
                         <Description>Html</Description>
                     </Number>
                 </Percent>

@@ -14,11 +14,11 @@ export const Skills = () => {
             <h1>Skills</h1>
 
             <div className="container">
-                {dataSkills.map( ({id,desc,Img})=>(
+                {dataSkills.map( ({id,desc,Img,percentage})=>(
                     <div key={id} className='item'>
                     <img src={Img} 
                     alt='imagen de prueba' />
-                    <SkillsIcon desc={desc} porcentaje={80}/>
+                    <SkillsIcon desc={desc} percentage={percentage}/>
                 </div>
                 ))}
                 

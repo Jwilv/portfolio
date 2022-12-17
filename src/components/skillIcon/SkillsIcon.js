@@ -92,25 +92,25 @@ const PercentageIcon = styled.span`
 
 const Description = styled.p`
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(210, 105, 30);
+    color: #000;
     margin: 0;
 `
 
-export const SkillsIcon = ({desc,porcentaje}) => {
+export const SkillsIcon = ({desc,percentage}) => {
     return (
         <SkillsIconContainer>
             <Card>
                 <Percent>
-                    <Dot variant={desc} value={porcentaje}></Dot>
+                    <Dot variant={desc} value={percentage}></Dot>
                     <Svg>
                         <Circle cx='70' cy='70' r='70' ></Circle>
-                        <Circle variant={desc} value={porcentaje} cx='70' cy='70' r='70' ></Circle>
+                        <Circle variant={desc} value={percentage} cx='70' cy='70' r='70' ></Circle>
                     </Svg>
                     <Number>
-                        <Percentage>{porcentaje}<PercentageIcon>%</PercentageIcon></Percentage>
+                        <Percentage>{percentage}<PercentageIcon>%</PercentageIcon></Percentage>
                         <Description>{desc}</Description>
                     </Number>
                 </Percent>
